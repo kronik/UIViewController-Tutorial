@@ -21,7 +21,7 @@ Please check out the demo project included.
 - (void)viewDidAppear: (BOOL)animated{
     [super viewDidAppear:animated];
 
-    [viewController startNavigationTutorial];
+    [self startNavigationTutorial];
 }
 ```
 
@@ -30,7 +30,7 @@ Please check out the demo project included.
 - (void)viewDidAppear: (BOOL)animated{
     [super viewDidAppear:animated];
 
-    [viewController startCreateNewItemTutorialWithInfo:NSLocalizedString(@"Pull down to create new item", nil)];
+    [self startCreateNewItemTutorialWithInfo:NSLocalizedString(@"Pull down to create new item", nil)];
 }
 ```
 
@@ -39,10 +39,10 @@ Please check out the demo project included.
 - (void)viewDidAppear: (BOOL)animated{
     [super viewDidAppear:animated];
 
-    [viewController startTapTutorialWithInfo:NSLocalizedString(@"Tap here to open settings", nil) 
-                                     atPoint:CGPointMake(160, 350)
-                        withFingerprintPoint:CGPointMake(160, 200) 
-                        shouldHideBackground:NO];
+    [self startTapTutorialWithInfo:NSLocalizedString(@"Tap here to open settings", nil) 
+                           atPoint:CGPointMake(160, 350)
+              withFingerprintPoint:CGPointMake(160, 200) 
+              shouldHideBackground:NO];
 }
 ```
 
