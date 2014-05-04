@@ -1,18 +1,20 @@
-UIlViewController+Tutorial
+UIViewController+Tutorial
 ==================
 
-Sources of UIlViewController+Tutorial and Demo app to show fancy on-boarding tutorials.
+Sources of UIViewController+Tutorial and Demo app to show fancy on-boarding tutorials.
 
 ##Download
-    $ git clone https://github.com/kronik/UIlViewController-Tutorial.git
-    $ cd UIlViewController-Tutorial/
+    $ git clone https://github.com/kronik/UIViewController-Tutorial.git
+    $ cd UIViewController-Tutorial/
 
 ##Usage
 Please check out the demo project included.
-# ![Screenshot](https://raw.github.com/kronik/UIlViewController-Tutorial/master/example.gif)
+# ![Screenshot](https://raw.github.com/kronik/UIViewController-Tutorial/master/example.gif)
 
 ### Initialization
 ``` objective-c
+#import "UIViewController+Tutorial.h"
+```
 
 ### Trigger navigation tutorial
 ``` objective-c
@@ -49,4 +51,4 @@ Supported build target - iOS 7.x
 Earliest supported deployment target - iOS 7.0
 
 ##License
-UIlViewController+Tutorial is available under the MIT license. See the LICENSE file for more info.
+UIViewController+Tutorial is available under the MIT license. See the LICENSE file for more info.
