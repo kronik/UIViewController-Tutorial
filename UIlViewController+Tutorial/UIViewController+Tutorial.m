@@ -80,7 +80,8 @@
 - (void)startTapTutorialWithInfo: (NSString *)infoText
                          atPoint: (CGPoint)infoPoint
             withFingerprintPoint: (CGPoint)touchPoint
-            shouldHideBackground: (BOOL)hideBackground {
+            shouldHideBackground: (BOOL)hideBackground
+                      completion: (UIViewControllerTutorialCompletionBlock)completion{
     
     NSString *tutorialKey = [NSString stringWithFormat:@"%@_%@_tutorial_%@", NSStringFromClass ([self class]), NSStringFromSelector(_cmd), infoText];
     
@@ -159,6 +160,10 @@
                         [tutorialView removeFromSuperview];
                         
                         this.view.userInteractionEnabled = YES;
+                        
+                        if(completion){
+                            completion();
+                        }
                     }];
                 }];
             }];
@@ -166,12 +171,19 @@
     }];
 }
 
+- (void)startTapTutorialWithInfo: (NSString *)infoText
+                         atPoint: (CGPoint)infoPoint
+            withFingerprintPoint: (CGPoint)touchPoint
+            shouldHideBackground: (BOOL)hideBackground{
+    [self startTapTutorialWithInfo:infoText atPoint:infoPoint withFingerprintPoint:touchPoint shouldHideBackground:hideBackground completion:NULL];
+}
+
 - (void)startTutorialWithInfo: (NSString *)infoText
                       atPoint: (CGPoint)infoPoint
  withFingerprintStartingPoint: (CGPoint)startPoint
                   andEndPoint: (CGPoint)endPoint
-         shouldHideBackground: (BOOL)hideBackground {
-    
+         shouldHideBackground: (BOOL)hideBackground
+                   completion: (UIViewControllerTutorialCompletionBlock)completion{
     NSString *tutorialKey = [NSString stringWithFormat:@"%@_%@_tutorial_%@", NSStringFromClass ([self class]), NSStringFromSelector(_cmd), infoText];
     
     BOOL wasShown = [[NSUserDefaults standardUserDefaults] boolForKey:tutorialKey];
@@ -242,17 +254,29 @@
                     [UIView animateWithDuration:0.5 animations:^{
                         tutorialView.alpha = 0.0;
                     } completion:^(BOOL finished) {
-
+                        
                         [touchView removeFromSuperview];
                         [infoLabel removeFromSuperview];
                         [tutorialView removeFromSuperview];
-                                                
+                        
                         this.view.userInteractionEnabled = YES;
+                        
+                        if(completion){
+                            completion();
+                        }
                     }];
                 }];
             }];
         }];
     }];
+}
+
+- (void)startTutorialWithInfo: (NSString *)infoText
+                      atPoint: (CGPoint)infoPoint
+ withFingerprintStartingPoint: (CGPoint)startPoint
+                  andEndPoint: (CGPoint)endPoint
+         shouldHideBackground: (BOOL)hideBackground {
+    [self startTutorialWithInfo:infoText atPoint:infoPoint withFingerprintStartingPoint:startPoint andEndPoint:endPoint shouldHideBackground:hideBackground completion:NULL];
 }
 
 @end
