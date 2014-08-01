@@ -37,8 +37,14 @@
     popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
-        [viewController startTapTutorialWithInfo:NSLocalizedString(@"Tap here to open settings", nil) atPoint:CGPointMake(160, 350)
-                            withFingerprintPoint:CGPointMake(160, 200) shouldHideBackground:NO];
+        [viewController startTapTutorialWithInfo:NSLocalizedString(@"Tap here to open settings", nil)
+                                         atPoint:CGPointMake(160, 350)
+                            withFingerprintPoint:CGPointMake(160, 200)
+                            shouldHideBackground:NO
+                                      completion:^{
+                                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Tutorial finished" message:@"This is the completion block!" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+                                          [alert show];
+                                      }];
     });
 
     [self.window makeKeyAndVisible];

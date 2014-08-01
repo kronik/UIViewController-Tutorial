@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+typedef void(^UIViewControllerTutorialCompletionBlock)();
+
 @interface UIViewController (Tutorial)
 
 - (void)animateTapForView: (UIView *)view;
@@ -22,9 +24,22 @@
                   andEndPoint: (CGPoint)endPoint
          shouldHideBackground: (BOOL)hideBackground;
 
+- (void)startTutorialWithInfo: (NSString *)infoText
+                      atPoint: (CGPoint)infoPoint
+ withFingerprintStartingPoint: (CGPoint)startPoint
+                  andEndPoint: (CGPoint)endPoint
+         shouldHideBackground: (BOOL)hideBackground
+                   completion: (UIViewControllerTutorialCompletionBlock)completion;
+
 - (void)startTapTutorialWithInfo: (NSString *)infoText
                          atPoint: (CGPoint)infoPoint
             withFingerprintPoint: (CGPoint)touchPoint
             shouldHideBackground: (BOOL)hideBackground;
+
+- (void)startTapTutorialWithInfo: (NSString *)infoText
+                         atPoint: (CGPoint)infoPoint
+            withFingerprintPoint: (CGPoint)touchPoint
+            shouldHideBackground: (BOOL)hideBackground
+                      completion: (UIViewControllerTutorialCompletionBlock)completion;
 
 @end

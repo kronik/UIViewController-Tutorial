@@ -19,8 +19,8 @@
 		02768A641916153C00653300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02768A4C1916153C00653300 /* UIKit.framework */; };
 		02768A6C1916153C00653300 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02768A6A1916153C00653300 /* InfoPlist.strings */; };
 		02768A6E1916153C00653300 /* Tutorial_CategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02768A6D1916153C00653300 /* Tutorial_CategoryTests.m */; };
-		02768A7A191615C800653300 /* UIViewController+Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = 02768A79191615C800653300 /* UIViewController+Tutorial.m */; };
-		02768A7D191616B400653300 /* DKCircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02768A7C191616B400653300 /* DKCircleImageView.m */; };
+		F49A2CB6198B028900E40961 /* DKCircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F49A2CB3198B028900E40961 /* DKCircleImageView.m */; };
+		F49A2CB7198B028900E40961 /* UIViewController+Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = F49A2CB5198B028900E40961 /* UIViewController+Tutorial.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,10 @@
 		02768A691916153C00653300 /* Tutorial Category DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tutorial Category DemoTests-Info.plist"; sourceTree = "<group>"; };
 		02768A6B1916153C00653300 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		02768A6D1916153C00653300 /* Tutorial_CategoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tutorial_CategoryTests.m; sourceTree = "<group>"; };
-		02768A78191615C800653300 /* UIViewController+Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tutorial.h"; sourceTree = "<group>"; };
-		02768A79191615C800653300 /* UIViewController+Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tutorial.m"; sourceTree = "<group>"; };
-		02768A7B191616B400653300 /* DKCircleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleImageView.h; sourceTree = "<group>"; };
-		02768A7C191616B400653300 /* DKCircleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCircleImageView.m; sourceTree = "<group>"; };
+		F49A2CB2198B028900E40961 /* DKCircleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleImageView.h; sourceTree = "<group>"; };
+		F49A2CB3198B028900E40961 /* DKCircleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCircleImageView.m; sourceTree = "<group>"; };
+		F49A2CB4198B028900E40961 /* UIViewController+Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tutorial.h"; sourceTree = "<group>"; };
+		F49A2CB5198B028900E40961 /* UIViewController+Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tutorial.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 		02768A4E1916153C00653300 /* Tutorial Category */ = {
 			isa = PBXGroup;
 			children = (
-				02768A77191615C800653300 /* UIlViewController+Tutorial */,
+				F49A2CB1198B028900E40961 /* UIlViewController+Tutorial */,
 				02768A571916153C00653300 /* DKAppDelegate.h */,
 				02768A581916153C00653300 /* DKAppDelegate.m */,
 				02768A5A1916153C00653300 /* Images.xcassets */,
@@ -151,15 +151,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		02768A77191615C800653300 /* UIlViewController+Tutorial */ = {
+		F49A2CB1198B028900E40961 /* UIlViewController+Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				02768A7B191616B400653300 /* DKCircleImageView.h */,
-				02768A7C191616B400653300 /* DKCircleImageView.m */,
-				02768A78191615C800653300 /* UIViewController+Tutorial.h */,
-				02768A79191615C800653300 /* UIViewController+Tutorial.m */,
+				F49A2CB2198B028900E40961 /* DKCircleImageView.h */,
+				F49A2CB3198B028900E40961 /* DKCircleImageView.m */,
+				F49A2CB4198B028900E40961 /* UIViewController+Tutorial.h */,
+				F49A2CB5198B028900E40961 /* UIViewController+Tutorial.m */,
 			);
-			path = "UIlViewController+Tutorial";
+			name = "UIlViewController+Tutorial";
+			path = "../../UIlViewController+Tutorial";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				02768A551916153C00653300 /* main.m in Sources */,
-				02768A7D191616B400653300 /* DKCircleImageView.m in Sources */,
-				02768A7A191615C800653300 /* UIViewController+Tutorial.m in Sources */,
+				F49A2CB6198B028900E40961 /* DKCircleImageView.m in Sources */,
+				F49A2CB7198B028900E40961 /* UIViewController+Tutorial.m in Sources */,
 				02768A591916153C00653300 /* DKAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +459,7 @@
 				02768A731916153C00653300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02768A741916153C00653300 /* Build configuration list for PBXNativeTarget "Tutorial Category DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +468,7 @@
 				02768A761916153C00653300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
